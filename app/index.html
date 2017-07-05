@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>quiz_builder_tool</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" type="text/css" href="bower_components/jqueryui/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-muted">Quiz Builder Tool</h3>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">Tools</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="drag-tool-wrapp">
+                  <h3 class="drag-tool">
+                    <span class="label label-default">Element 1</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="drag-tool-wrapp">
+                  <h3 class="drag-tool">
+                    <span class="label label-default">Element 2</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Drop items here</div>
+          <div class="panel-body">
+            <div id="canvas" class="area-canvas">
+
+            </div>
+          </div>
+          <div class="panel-footer clearfix">
+            Object editing tools:
+            <button type="button" class="btn btn-primary pull-right">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">JSON Output</div>
+      <div class="panel-body">
+        <pre class="output">Waiting for yummi JSON...</pre>
+      </div>
+    </div>
+    <!-- <div id="test" style="border: 1px solid #ccc; padding:10px;">Test</div> -->
+    <div class="row">
+      <div class="col-md3">
+        <div data-bind="foreach: tools" class="droppable-tools">
+          <button type="button" class="btn btn-primary" data-handler="$data" data-bind="text:toolName(), click: $parent.callHandler"></button>
+        </div> 
+        <a href="#" class="test">test</a>       
+      </div>
+      <div class="col-md-9">
+        <div class="knock-box"></div>
+      </div>   
+    </div>
+    <div class="footer">
+      <p>♥ from the Yeoman team</p>
+    </div>
+
+  </div>
+
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/jqueryui/ui/jquery-ui.js"></script>
+  <script src="bower_components/knockoutjs/build/output/knockout-latest.debug.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  //     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  //     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  //     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  //     e.src='//www.google-analytics.com/analytics.js';
+  //     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  //     ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/main-knock.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/plugins.js -->
+  <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+  <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+  <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+  <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+  <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+  <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+  <script src="bower_components/sass-bootstrap/js/button.js"></script>
+  <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+  <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+  <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+  <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+  <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
